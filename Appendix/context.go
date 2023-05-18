@@ -14,13 +14,13 @@ import (
 // main method
 func main() {
 
-  var delay time.Duration
+	var delay time.Duration
 
 	delay = time.Millisecond
 
 	var cancel context.CancelFunc
 
-  var contex context.Context
+	var contex context.Context
 
 	contex, cancel = context.WithTimeout(context.Background(), delay)
 
@@ -46,7 +46,6 @@ func main() {
 		}
 		log.Printf("channel done")
 	}(channel)
-
 
 	time.Sleep(delay * 2)
 
